@@ -1,0 +1,24 @@
+<% if @contacts %>
+共有 <%= @contacts.length%> 位聯絡人
+
+
+<table>
+<tr>
+<th>姓名</th>
+<th>Email</th>
+</tr>
+<% @contacts.each do |contact| %>
+<tr class="<%= cycle("odd","even") %>">
+<td>
+<%= contact.name %>
+</td>
+<td>
+<%= contact.email %>
+</td>
+</tr>
+<% end %>
+</table>
+<% else %>
+找不到聯絡人
+<% end %>
+
