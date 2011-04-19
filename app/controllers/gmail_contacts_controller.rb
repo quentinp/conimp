@@ -1,0 +1,2 @@
+class GmailContactsController < ApplicationController
+end
