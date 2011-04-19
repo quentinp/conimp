@@ -1,0 +1,21 @@
+<h1>Listing googlecontacts</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @googlecontacts.each do |googlecontact| %>
+  <tr>
+    <td><%= link_to 'Show', googlecontact %></td>
+    <td><%= link_to 'Edit', edit_googlecontact_path(googlecontact) %></td>
+    <td><%= link_to 'Destroy', googlecontact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Googlecontact', new_googlecontact_path %>
